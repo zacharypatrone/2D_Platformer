@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 99601652}
   - component: {fileID: 99601654}
   - component: {fileID: 99601653}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: grasstile2_beavergame (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 458899912}
   - component: {fileID: 458899914}
   - component: {fileID: 458899913}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: grasstile2_beavergame (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -372,9 +372,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1156301835}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1078518114
 SpriteRenderer:
@@ -486,11 +487,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d2b689512b29534d9e9903287cce6a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  groundCheckCollider: {fileID: 0}
+  animator: {fileID: 1078518118}
+  groundCheckCollider: {fileID: 1156301835}
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
+  speed: 2
+  jumpPower: 75
+  isGrounded: 1
 --- !u!95 &1078518118
 Animator:
   serializedVersion: 3
@@ -510,6 +514,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1156301834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1156301835}
+  m_Layer: 0
+  m_Name: GroundCheckBeaver
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1156301835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156301834}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.76, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1078518113}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1196037275
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +555,7 @@ GameObject:
   - component: {fileID: 1196037278}
   - component: {fileID: 1196037277}
   - component: {fileID: 1196037276}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: grasstile2_beavergame
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -541,7 +575,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.021415353}
+  m_Offset: {x: 0, y: -0.020915568}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -552,7 +586,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.9571693}
+  m_Size: {x: 1, y: 0.95816886}
   m_EdgeRadius: 0
 --- !u!212 &1196037277
 SpriteRenderer:
@@ -633,7 +667,7 @@ GameObject:
   - component: {fileID: 1273201331}
   - component: {fileID: 1273201333}
   - component: {fileID: 1273201332}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: grasstile2_beavergame
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -742,6 +776,7 @@ GameObject:
   - component: {fileID: 1385568796}
   - component: {fileID: 1385568795}
   - component: {fileID: 1385568794}
+  - component: {fileID: 1385568797}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -808,12 +843,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1385568793}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalPosition: {x: 3, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1385568797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385568793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0287362c3c1e01f45b0489775efabec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPlayer: {fileID: 1078518113}
+  cameraOffset: {x: 3, y: 1, z: -10}
+  smoothFactor: 3
 --- !u!1 &1643093551
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,7 +875,7 @@ GameObject:
   - component: {fileID: 1643093552}
   - component: {fileID: 1643093554}
   - component: {fileID: 1643093553}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: grasstile2_beavergame
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -934,7 +984,7 @@ GameObject:
   - component: {fileID: 2117069021}
   - component: {fileID: 2117069023}
   - component: {fileID: 2117069022}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: grasstile2_beavergame (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
