@@ -10,15 +10,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public void BackToMenu()
     {
         SceneManager.LoadScene(0);
-    }
-
-
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(2);
     }
 
     public void About()
@@ -26,9 +25,24 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    public void QuitGame()
+    public void PlayGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene(2);
+    }
+
+    public void EasyDifficulty()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void MediumDifficulty()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void HardDifficulty()
+    {
+        SceneManager.LoadScene(3);
     }
 
 }
