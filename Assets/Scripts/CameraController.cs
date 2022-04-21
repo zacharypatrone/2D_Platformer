@@ -22,5 +22,6 @@ public class CameraController : MonoBehaviour
         // smoothes camera position to work with low fps to high
         Vector3 smoothPosition = Vector3.Lerp(transform.position, targetPosition, smoothFactor * Time.fixedDeltaTime);
         transform.position = targetPosition;
+
     }
 }
