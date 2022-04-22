@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     
-    
-
     // private fields
     Rigidbody2D rb;
     [SerializeField] Animator animator;
