@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
     
-    // private fields
     Rigidbody2D rb;
     [SerializeField] Animator animator;
     Vector2 movement;
@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] bool isGrounded = false;
     bool jump = false;
 
+    public static int numCoins;
+    public TextMeshProUGUI coinCounterText;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,6 +37,7 @@ public class PlayerController : MonoBehaviour
         
         HandleInput();
         HandleAnimation();
+        LogCounter();
 
     }
 
@@ -109,6 +113,11 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
         }
+    }
+
+    void LogCounter()
+    {
+        coinCounterText.text = "x" + numCoins;
     }
 
 }
