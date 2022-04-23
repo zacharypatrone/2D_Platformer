@@ -9,7 +9,9 @@ public class LogController : MonoBehaviour
 
     public float yRotateSpeed = .25f;
 
-    
+    [SerializeField] private AudioSource collectLogSound;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,7 @@ public class LogController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             PlayerController.numCoins++;
+            collectLogSound.Play();
             Destroy(gameObject); 
         }
     }

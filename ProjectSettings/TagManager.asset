@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Log
+  - Cabin
   layers:
   - Default
   - TransparentFX

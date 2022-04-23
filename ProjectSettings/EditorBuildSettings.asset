@@ -15,6 +15,21 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu_Scenes/DifficultySelect_Scene.unity
     guid: 944981195243b99498f312f1e9b86f18
   - enabled: 1
-    path: Assets/Scenes/Game_Scenes/Level0_Scene.unity
+    path: Assets/Scenes/Game_Scenes/Level1_Scene.unity
     guid: e0128e347526d6240941c857012581da
+  - enabled: 1
+    path: Assets/Scenes/Game_Scenes/Level2_Scene.unity
+    guid: 3e6658e79209f604f9569dcd2ad27eaf
+  - enabled: 1
+    path: Assets/Scenes/Game_Scenes/Level3_Scene.unity
+    guid: 57d253ecb6bc6e94ba3eb24ed59f7167
+  - enabled: 1
+    path: Assets/Scenes/Game_Scenes/Level4_Scene.unity
+    guid: 74da4539ab723dc43a03f1d9c200cb7a
+  - enabled: 1
+    path: Assets/Scenes/Game_Scenes/Level5_Scene.unity
+    guid: 2b560b9b7d90e044ba14db73241aea3e
+  - enabled: 1
+    path: Assets/Scenes/Game_Scenes/EndGame_Scene.unity
+    guid: 0f9ab27fc20ee9e4cbcb13618ecd68ed
   m_configObjects: {}

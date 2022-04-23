@@ -24,6 +24,10 @@ public class PlayerController : MonoBehaviour
     public static int numCoins;
     public TextMeshProUGUI coinCounterText;
 
+    // AUDIO
+    [SerializeField] private AudioSource jumpSound;
+    
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -74,6 +78,7 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
             hasJumped = false;
             // add jump force
+            jumpSound.Play();
             rb.AddForce(new Vector2(0f, jumpPower));
         }
 
@@ -95,6 +100,7 @@ public class PlayerController : MonoBehaviour
         {
             jump = false;
         }
+
     }
 
     void HandleAnimation()
