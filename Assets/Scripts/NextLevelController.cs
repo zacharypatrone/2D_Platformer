@@ -25,7 +25,6 @@ public class NextLevelController : MonoBehaviour
     {
         sceneID = SceneManager.GetActiveScene().buildIndex;
         sceneID++;
-
         levelCompleteSound.Play();
         SceneManager.LoadScene(sceneID);
     }

@@ -18,6 +18,7 @@ public class HealthController : MonoBehaviour
     {
         for (int i = 0; i < hearts.Length; i++)
         {
+            
             if (i < playerHealth)
             {
                 hearts[i].color = Color.white;

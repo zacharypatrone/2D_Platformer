@@ -1,0 +1,14 @@
+CS 583 - 2D Game Project
+4/23/2022
+
+Zachary Patrone
+
+BIBLIOGRAPHY
+
+All art was drawn myself using https://www.pixilart.com/ and https://www.picturetopeople.org/.
+
+The only art that was taken from online were the background images from in game and the menus:
+	https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6a449f5d-bbfe-42b7-b077-54f16a0a8c63/dejy7na-c7a7707b-92ea-4f91-9a0d-577939f147e6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzZhNDQ5ZjVkLWJiZmUtNDJiNy1iMDc3LTU0ZjE2YTBhOGM2M1wvZGVqeTduYS1jN2E3NzA3Yi05MmVhLTRmOTEtOWEwZC01Nzc5MzlmMTQ3ZTYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.OL6VOTsZuOdZhQZ890xPj7BhIFL7Z-tqFu1n0lxus7Q
+
+The code that was borrowed for the Fox movement was:
+	  https://www.noveltech.dev/simple-patrolling-monster-unity/ 

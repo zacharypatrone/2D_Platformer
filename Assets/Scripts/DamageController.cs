@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DamageController : MonoBehaviour
 {
@@ -8,8 +9,10 @@ public class DamageController : MonoBehaviour
     [SerializeField] private HealthController hc;
     [SerializeField] bool stayOnContact;
 
+    private int sceneID;
+
     // AUDIO
-    // [SerializeField] private AudioSource damageSound;
+    [SerializeField] private AudioSource damageSound;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,8 +24,13 @@ public class DamageController : MonoBehaviour
 
     void Damage()
     {
-        // damageSound.Play();
+        damageSound.Play();
         hc.playerHealth = hc.playerHealth - damage;
+        if (hc.playerHealth <= 0)
+        {
+            sceneID = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(sceneID);
+        }
         hc.UpdateHealth();
         gameObject.SetActive(stayOnContact);
     }
